@@ -30,56 +30,77 @@
 --
 -- Dave Newbold, March 2013. Rewritten by Paschalis Vichoudis, June 2013
 
+-- Updated by Alessandra Camplani - alessandra.camplani@cern.ch
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-library unisim;
-use unisim.VComponents.all;
+--library unisim;
+--use unisim.VComponents.all;
+LIBRARY altera_mf;
+library lpm;
+USE lpm.lpm_components.all;
+
 
 entity ipbus_clock_div is
-	port(
-		clk: in std_logic;
-		d7 : out std_logic;
-		d17: out std_logic;
-		d25: out std_logic;
-		d28: out std_logic
-	);
+    port(
+        clk: in std_logic;
+        d7 : out std_logic;
+        d17: out std_logic;
+        d25: out std_logic;
+        d28: out std_logic
+    );
 
 end ipbus_clock_div;
 
 architecture rtl of ipbus_clock_div is
 
-	signal rst_b: std_logic;
-	signal cnt: unsigned(27 downto 0);
+    signal rst_b        : std_logic;
+    signal cnt          : unsigned(27 downto 0);
 
 begin
+------------------------------------------------------------------------------------------
+-- Conversion done from Xilinx component SRL16 to Intel Altera Megafunctions
+-- Done following picture 16, at page 38/33 of this document
+-- http://xilinx.eetrend.com/files-eetrend-xilinx/forum/201703/11147-29109-altera_design_flow_for_xilinx_users.pdf
+------------------------------------------------------------------------------------------
+--    reset_gen: component SRL16
+--        port map(
+--            a0  => '1',
+--            a1  => '1',
+--            a2  => '1',
+--            a3  => '1',
+--            clk => clk,
+--            d => '1',
+--            q => rst_b
+--        );  
 
-	reset_gen: component SRL16
-		port map(
-			a0 	=> '1',
-			a1 	=> '1',
-			a2 	=> '1',
-			a3 	=> '1',
-			clk => clk,
-			d => '1',
-			q => rst_b
-		);	
+    reset_gen: entity work.x2a_SRL16
+        port map(
+            a       => "1111",
+            clk     => clk,
+            d       => '1',
+            q       => rst_b
+        );  
 
-	process(rst_b, clk)
-	begin
-		if rising_edge(clk) then
-			if rst_b = '0' then
-				cnt <= (others => '0');
-			else
-				cnt <= cnt + 1;
-			end if;
-		end if;
-	end process;
-	
-	d28 <= cnt(27);
-	d25 <= cnt(24);
-	d17 <= cnt(16);
-	d7  <= cnt(6);
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+    process(rst_b, clk)
+    begin
+        if rising_edge(clk) then
+            if rst_b = '0' then
+                cnt <= (others => '0');
+            else
+                cnt <= cnt + 1;
+            end if;
+        end if;
+    end process;
+    
+    d28 <= cnt(27);
+    d25 <= cnt(24);
+    d17 <= cnt(16);
+    d7  <= cnt(6);
 
 end rtl;

@@ -57,26 +57,26 @@ Generate the project file:
 
 The following steps are needed to compile the code and generate a binary file:
 
-1. Running Quartus Prime IP Generation Tool 
+1. Run Quartus Prime IP Generation Tool 
 
 `quartus_ipgenerate --run_default_mode_op monitoring -c monitoring`
 
-2. Runnign Quartus Prime Analysis and Synthesis
+2. Run Quartus Prime Analysis and Synthesis
 
 `quartus_syn --read_settings_files=on --write_settings_files=off monitoring -c monitoring`
 
-3. Running Quartus Prime Fitter (complete)
+3. Run Quartus Prime Fitter (complete)
 
 `quartus_fit --read_settings_files=on --write_settings_files=off monitoring -c monitoring --plan --place --route --retime --finalize`
 
-4. Running Quartus Prime Assembler
+4. Run Quartus Prime Assembler
 
 `quartus_asm --read_settings_files=on --write_settings_files=off monitoring -c monitoring`
 
 
 ## How to run a test in hardware
 
-To run a tests in hardware, with a Stratix 10 MX development kit, please [refer to this link](http://prm-fw-docs.web.cern.ch/03_hw_testing/02_ethernet_standalone_tests/).
+To run tests in hardware, with a Stratix 10 MX development kit, please [refer to this link](http://prm-fw-docs.web.cern.ch/03_hw_testing/02_ethernet_standalone_tests/).
 
 
 

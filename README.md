@@ -17,6 +17,8 @@ The main project files are placed in the folder Stratix10mx2100_project:
 
 In the folder _imported_from_design_example_ one can find an updated version on the project example provided by Intel.
 
+In the folders _scripts/PHY_MAC_setup/system_console_ the set of scripts to setup the firwmare from the system console, for hardware tests, is also available.
+
 ### Building the Intel project
 
 Open Quartus and in the tcl console cd to the _Stratix10mx2100_project_ folder, e.g.:

@@ -1,40 +1,42 @@
-IPbus firmware
-==============
+IPbus for Intel Stratix 10 MX 2100
+==================================
 
-The IPbus protocol is a simple packet-based control protocol for reading
-and modifying memory-mapped resources within FPGA-based IP-aware
-hardware devices which have a virtual A32/D32 bus.
+The top folder of the repo has them same structure of the IPbus firmware repository.
+One folder is added, _Stratix10mx2100_project_, which containes all the Intel dedicated files.
 
-The IPbus suite of software and firmware implement a reliable
-high-performance control link for particle physics electronics, based on
-the IPbus protocol. This suite has successfully replaced VME control in
-several large projects, and consists of the following components:
+## The project
 
-* **IPbus firmware** : A module that implements the IPbus protocol within end-user
-    hardware.
+To build the project Intel Quartus Pro v19.2 is recommended.
 
-* **ControlHub** : A software application that mediates simultaneous hardware access
-    from multiple uHAL clients, and implements the IPbus reliability
-    mechanism over UDP
+The main project files are placed in the folder Stratix10mx2100_project:
 
-* **uHAL** : The Hardware Access Library (HAL) providing an end-user C++/Python
-    API for IPbus reads, writes and RMW (read-modify-write)
-    transactions.
+- tcl file to build the project: _monitoring.tcl_
+- project top level: _Monitoring.vhd_
+- ipbus top level (instantiad in Monitoring.vhd): _ipbus_top.vhd_
+- project constraints: _monitoring.out.sdc_
 
-This repository contains a reference implementation for an IPbus 2.0 UDP
-server. It has been extensively tested on several different boards
-within several particle physics experiments. However, it is supported on
-a best-effort basis, and is provided on an "AS IS" BASIS, WITHOUT
-WARRANTY OF ANY KIND, either express or implied, including, without
-limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT,
-MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+In the folder _imported_from_design_example_ one can find an updated version on the project example provided by Intel.
 
-*Further reading*
+### Building the Intel project
 
-The **most recent paper** describing IPbus is from the proceedings for
-TWEPP2014:
+Open Quartus and in the tcl console cd to the _Stratix10mx2100_project_ folder, e.g.:
 
-> C. Ghabrous Larrea, K. Harder, D. Newbold, D. Sankey, A. Rose, A. Thea
-> and T. Williams, "IPbus: a flexible Ethernet-based control system for
-> xTCA hardware", *JINST* **10** (2015) no.02, C02019. [DOI:
-> 10.1088/1748-0221/10/02/C02019](http://dx.doi.org/10.1088/1748-0221/10/02/C02019)
+`cd c:/Users/myuser/Documents//ipbus_for_intel/Stratix10mx2100_project`
+
+Source the tcl file to create the project file, with extension `.qpf`, as follow:
+
+`source monitoring.tcl`
+
+From the Quartus menu go to File -> Open Project and select monitoring.qpf, or simply double click on monitoring.qpf.
+
+### Compiling the code
+
+To prodice the binary file, in the Quartus Compilation Dashboard, double click on the Assembler step.
+This will produce, in the auto generate folder _output_files_, the binary file with extension .bit.
+
+
+
+
+
+
+

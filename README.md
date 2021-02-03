@@ -8,7 +8,7 @@ The main project files are placed in the folder Stratix10mx2100_project:
 
 - tcl file to build the project: _monitoring.tcl_
 - project top level: _Monitoring.vhd_
-- ipbus top level (instantiad in Monitoring.vhd): _ipbus_top.vhd_
+- ipbus top level (instantiated in Monitoring.vhd): _ipbus_top.vhd_
 - project constraints: _monitoring.out.sdc_
 
 In the folder _imported_from_design_example_ one can find an updated version on the project example provided by Intel.

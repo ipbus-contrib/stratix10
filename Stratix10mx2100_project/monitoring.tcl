@@ -88,54 +88,54 @@ if {$make_assignments} {
 	set_global_assignment -name ENABLE_LOGIC_ANALYZER_INTERFACE OFF
 	set_global_assignment -name VHDL_SHOW_LMF_MAPPING_MESSAGES OFF
 	set_global_assignment -name IP_FILE IP/To_MAC_fifo.ip
-	set_global_assignment -name VHDL_FILE ../Common/code/hilo_detect.vhd
-	set_global_assignment -name VHDL_FILE ../Common/code/delay_chain.vhd
+	set_global_assignment -name VHDL_FILE hilo_detect.vhd
+	set_global_assignment -name VHDL_FILE delay_chain.vhd
 	set_global_assignment -name VHDL_FILE valid_8to32.vhd
 	set_global_assignment -name VHDL_FILE valid_32to8.vhd -hdl_version VHDL_2008
 	set_global_assignment -name IP_FILE IP/valid_32to8fifo.ip
 	set_global_assignment -name VHDL_FILE avalon_tx_in_loop.vhd
-	set_global_assignment -name VHDL_FILE ../Common/code/mux161.vhd
+	set_global_assignment -name VHDL_FILE mux161.vhd
 	set_global_assignment -name VHDL_FILE x2a_SRL16.vhd
 	set_global_assignment -name VERILOG_FILE imported_from_design_example/alt_mge_reset_synchronizer.v
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_transport_udp/firmware/hdl/udp_txtransactor_if_simple.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_transport_udp/firmware/hdl/udp_tx_mux.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_transport_udp/firmware/hdl/udp_rxtransactor_if_simple.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_transport_udp/firmware/hdl/udp_clock_crossing_if.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_transport_udp/firmware/hdl/udp_status_buffer.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_transport_udp/firmware/hdl/udp_rxram_shim.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_transport_udp/firmware/hdl/udp_rxram_mux.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_transport_udp/firmware/hdl/udp_packet_parser.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_transport_udp/firmware/hdl/udp_dualportram_tx.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_transport_udp/firmware/hdl/udp_dualportram_rx.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_transport_udp/firmware/hdl/udp_dualportram.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_transport_udp/firmware/hdl/udp_do_rx_reset.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_transport_udp/firmware/hdl/udp_byte_sum.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_transport_udp/firmware/hdl/udp_build_status.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_transport_udp/firmware/hdl/udp_build_resend.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_transport_udp/firmware/hdl/udp_build_ping.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_transport_udp/firmware/hdl/udp_buffer_selector.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_transport_udp/firmware/hdl/udp_rarp_block.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_transport_udp/firmware/hdl/udp_build_payload.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_transport_udp/firmware/hdl/udp_build_arp.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_transport_udp/firmware/hdl/udp_ipaddr_block.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_core/firmware/hdl/transactor_cfg.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_core/firmware/hdl/transactor_sm.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_core/firmware/hdl/transactor_if.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_core/firmware/hdl/transactor.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_core/firmware/hdl/trans_arb.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_transport_udp/firmware/hdl/udp_if_flat.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_slaves/firmware/hdl/ipbus_peephole_ram.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_slaves/firmware/hdl/ipbus_ram.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_slaves/firmware/hdl/ipbus_reg_v.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_slaves/firmware/hdl/ipbus_ctrlreg_v.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_core/firmware/hdl/ipbus_fabric_sel.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_util/firmware/hdl/ipbus_clock_div.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_core/firmware/hdl/ipbus_trans_decl.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_util/firmware/hdl/ipbus_decode_ipbus_example.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_core/firmware/hdl/ipbus_package.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_slaves/firmware/hdl/ipbus_reg_types.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_util/firmware/hdl/ipbus_example.vhd
-	set_global_assignment -name VHDL_FILE ../../intel_s10_ipbus/components/ipbus_util/firmware/hdl/masters/ipbus_ctrl.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_transport_udp/firmware/hdl/udp_txtransactor_if_simple.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_transport_udp/firmware/hdl/udp_tx_mux.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_transport_udp/firmware/hdl/udp_rxtransactor_if_simple.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_transport_udp/firmware/hdl/udp_clock_crossing_if.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_transport_udp/firmware/hdl/udp_status_buffer.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_transport_udp/firmware/hdl/udp_rxram_shim.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_transport_udp/firmware/hdl/udp_rxram_mux.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_transport_udp/firmware/hdl/udp_packet_parser.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_transport_udp/firmware/hdl/udp_dualportram_tx.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_transport_udp/firmware/hdl/udp_dualportram_rx.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_transport_udp/firmware/hdl/udp_dualportram.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_transport_udp/firmware/hdl/udp_do_rx_reset.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_transport_udp/firmware/hdl/udp_byte_sum.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_transport_udp/firmware/hdl/udp_build_status.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_transport_udp/firmware/hdl/udp_build_resend.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_transport_udp/firmware/hdl/udp_build_ping.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_transport_udp/firmware/hdl/udp_buffer_selector.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_transport_udp/firmware/hdl/udp_rarp_block.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_transport_udp/firmware/hdl/udp_build_payload.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_transport_udp/firmware/hdl/udp_build_arp.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_transport_udp/firmware/hdl/udp_ipaddr_block.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_core/firmware/hdl/transactor_cfg.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_core/firmware/hdl/transactor_sm.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_core/firmware/hdl/transactor_if.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_core/firmware/hdl/transactor.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_core/firmware/hdl/trans_arb.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_transport_udp/firmware/hdl/udp_if_flat.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_slaves/firmware/hdl/ipbus_peephole_ram.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_slaves/firmware/hdl/ipbus_ram.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_slaves/firmware/hdl/ipbus_reg_v.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_slaves/firmware/hdl/ipbus_ctrlreg_v.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_core/firmware/hdl/ipbus_fabric_sel.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_util/firmware/hdl/ipbus_clock_div.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_core/firmware/hdl/ipbus_trans_decl.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_util/firmware/hdl/ipbus_decode_ipbus_example.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_core/firmware/hdl/ipbus_package.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_slaves/firmware/hdl/ipbus_reg_types.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_util/firmware/hdl/ipbus_example.vhd
+	set_global_assignment -name VHDL_FILE ../components/ipbus_util/firmware/hdl/masters/ipbus_ctrl.vhd
 	set_global_assignment -name VHDL_FILE reset_gen.vhd -hdl_version VHDL_2008
 	set_global_assignment -name VHDL_FILE ipbus_top.vhd -hdl_version VHDL_2008
 	set_global_assignment -name VHDL_FILE ipbus_axi_ast.vhd -hdl_version VHDL_2008
@@ -155,8 +155,8 @@ if {$make_assignments} {
 	set_global_assignment -name QSYS_FILE imported_from_design_example/address_decoder/alt_mge_rd_avmm_mux_xcvr_rcfg.qsys
 	set_global_assignment -name QSYS_FILE imported_from_design_example/address_decoder/alt_mge_rd_addrdec_mch.qsys
 	set_global_assignment -name IP_FILE IP/atx_1562.ip
-	set_global_assignment -name VHDL_FILE ../Common/packages/eth_package.vhd
-	set_global_assignment -name VHDL_FILE ../Common/packages/prm_format.vhd
+	set_global_assignment -name VHDL_FILE eth_package.vhd
+	set_global_assignment -name VHDL_FILE prm_format.vhd
 	set_global_assignment -name VHDL_FILE Monitoring.vhd
 	set_global_assignment -name IP_FILE IP/clock_gen_pll.ip
 	set_global_assignment -name IP_FILE IP/phy_layer.ip

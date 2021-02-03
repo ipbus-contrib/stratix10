@@ -1,0 +1,109 @@
+# ----------------------------------------------------------------------
+# Extensions for project files
+# ----------------------------------------------------------------------
+*.csv
+*.qdf
+*.qpf
+*.qsf
+*.qws
+*.json
+**/output_files/*
+**/qdb/*
+**/db/*
+**/synth_dumps/*
+**/tmp-clearbox/*
+**/.qsys_edit/*
+*.sof
+*.bak
+# files after merge conflicts
+*.*.orig
+# for archives
+*.qar
+*.qarlog
+*.archive.rpt
+*.xrf
+*.rpt
+**/*design_example/*
+*_info
+*.ipxact
+
+# ----------------------------------------------------------------------
+# Extensions for simulation files
+# ----------------------------------------------------------------------
+*.ini
+*.wlf
+**/transcript
+**/libraries/*
+*wlf*
+**/mentor/msim_setup.tcl
+**/mentor/*
+**/modelsim/*
+**/*_tb/common/*
+*.vho
+#for work simulation library
+**/*_tb/work/*
+*.mpf
+*.mti
+
+# ----------------------------------------------------------------------
+# Extensions for IP cores
+# ----------------------------------------------------------------------
+*.ver
+**/sim/*
+*.bsf
+*.cmp
+*.qgsimc
+*.html
+*.ppf
+*.qgsynthc
+*.sopcinfo
+*.spd
+*.xml
+*_bb.v
+*_generation.rpt
+*_generation_previous.rpt
+*_inst.v
+*_inst.vhd
+**/aldec/*
+**/synth/*
+riviera_files.tcl
+*.qip
+*.qsys
+#remove files generated within separate directories within IP
+**/ip/*
+
+# ----------------------------------------------------------------------
+# Extensions for latex documentation
+# ----------------------------------------------------------------------
+*.dvi
+*.toc
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.brf
+*.bcf
+*-blx.bib
+*.run.xml
+*.cb
+*.ind
+*.idx
+*.ilg
+*.inx
+*.synctex.gz
+*~
+*.fls
+*.fdb_latexmk
+.*.lb
+*.glo
+*.ist
+*.glsdefs
+*.glg
+*.gls
+*.acn
+*.acr
+*.alg
+*.mw
+*xdy
+PRM_FW_doc.pdf

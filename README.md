@@ -8,6 +8,8 @@ One folder is added, _Stratix10mx2100_project_, which containes all the Intel de
 
 To build the project Intel Quartus Pro v19.2 is recommended.
 
+All the IPbus code sits into _IPbus_code_ folder.
+
 The main project files are placed in the folder Stratix10mx2100_project:
 
 - tcl file to build the project: _monitoring.tcl_
@@ -17,7 +19,7 @@ The main project files are placed in the folder Stratix10mx2100_project:
 
 In the folder _imported_from_design_example_ one can find an updated version on the project example provided by Intel.
 
-In the folders _scripts/PHY_MAC_setup/system_console_ the set of scripts to setup the firwmare from the system console, for hardware tests, is also available.
+In the folders _/PHY_MAC_setup/system_console_ the set of scripts to setup the firwmare from the system console, for hardware tests, is also available.
 
 ### Building the Intel project
 

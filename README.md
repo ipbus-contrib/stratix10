@@ -34,6 +34,10 @@ From the Quartus menu go to File -> Open Project and select monitoring.qpf, or s
 To prodice the binary file, in the Quartus Compilation Dashboard, double click on the Assembler step.
 This will produce, in the auto generate folder _output_files_, the binary file with extension .bit.
 
+## How to run a test in hardware
+
+To run a tests in hardware, with a Stratix 10 MX development kit, please [refer to this link](http://prm-fw-docs.web.cern.ch/03_hw_testing/02_ethernet_standalone_tests/).
+
 
 
 

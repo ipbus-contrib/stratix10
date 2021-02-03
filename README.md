@@ -69,7 +69,11 @@ The following steps are needed to compile the code and generate a binary file:
 
 `quartus_fit --read_settings_files=on --write_settings_files=off monitoring -c monitoring --plan --place --route --retime --finalize`
 
-4. Run Quartus Prime Assembler
+4. Run Quartus Prime Timing Analyzer 
+
+`quartus_sta monitoring -c monitoring --mode=finalize`
+
+5. Run Quartus Prime Assembler
 
 `quartus_asm --read_settings_files=on --write_settings_files=off monitoring -c monitoring`
 

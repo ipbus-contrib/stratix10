@@ -19,7 +19,7 @@ In the folders _/PHY_MAC_setup/system_console_ the set of scripts to setup the f
 
 ### Project creation
 
-Open Quartus and in the tcl console cd to the _Stratix10mx2100_project_ folder, e.g.:
+Open Quartus and in the tcl console navigare to the _Stratix10mx2100_project_ folder, e.g.:
 
 `cd c:/Users/myuser/Documents//ipbus_for_intel/Stratix10mx2100_project`
 
@@ -27,13 +27,15 @@ Source the tcl file to create the project file, with extension `.qpf`, as follow
 
 `source monitoring.tcl`
 
-From the Quartus menu go to File -> Open Project and select monitoring.qpf, or simply double click on monitoring.qpf.
-The intermediate steps (Synthesis, Fitting, Timing Analysis, etc.) are also available in the GUI.
+From the Quartus menu go to File, Open Project and select monitoring.qpf, or simply double click on monitoring.qpf in the Stratix10mx2100_project directory.
 
 ### Compiling the code
 
-To prodice the binary file, in the Quartus Compilation Dashboard, double click on the Assembler step.
+To produce the binary file, in the Quartus Compilation Dashboard, double click on the Assembler step.
 This will produce, in the auto generate folder _output_files_, the binary file with extension .bit.
+
+The intermediate steps (Synthesis, Fitting, Timing Analysis, etc.) are also available in the GUI.
+
 
 ## From the command line
 

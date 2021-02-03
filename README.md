@@ -1,10 +1,4 @@
-IPbus for Intel Stratix 10 MX 2100
-==================================
-
-The top folder of the repo has them same structure of the IPbus firmware repository.
-One folder is added, _Stratix10mx2100_project_, which containes all the Intel dedicated files.
-
-# The project
+# IPbus for Intel Stratix 10 MX 2100
 
 To build the project Intel Quartus Pro v19.2 is recommended.
 
@@ -21,7 +15,7 @@ In the folder _imported_from_design_example_ one can find an updated version on 
 
 In the folders _/PHY_MAC_setup/system_console_ the set of scripts to setup the firwmare from the system console, for hardware tests, is also available.
 
-## From the GUI
+## From the Quartus GUI
 
 ### Project creation
 
@@ -34,6 +28,7 @@ Source the tcl file to create the project file, with extension `.qpf`, as follow
 `source monitoring.tcl`
 
 From the Quartus menu go to File -> Open Project and select monitoring.qpf, or simply double click on monitoring.qpf.
+The intermediate steps (Synthesis, Fitting, Timing Analysis, etc.) are also available in the GUI.
 
 ### Compiling the code
 
@@ -55,6 +50,26 @@ Open the folder where the tcl file of the project is placed:
 Generate the project file:
 
 `quartus_sh -t monitoring.tcl`
+
+### Compiling the code
+
+The following steps are needed to compile the code and generate a binary file:
+
+1. Running Quartus Prime IP Generation Tool 
+
+`quartus_ipgenerate --run_default_mode_op monitoring -c monitoring`
+
+2. Runnign Quartus Prime Analysis and Synthesis
+
+`quartus_syn --read_settings_files=on --write_settings_files=off monitoring -c monitoring`
+
+3. Running Quartus Prime Fitter (complete)
+
+`quartus_fit --read_settings_files=on --write_settings_files=off monitoring -c monitoring --plan --place --route --retime --finalize`
+
+4. Running Quartus Prime Assembler
+
+`quartus_asm --read_settings_files=on --write_settings_files=off monitoring -c monitoring`
 
 
 ## How to run a test in hardware

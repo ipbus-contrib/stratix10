@@ -32,7 +32,7 @@ From the Quartus menu go to File, Open Project and select monitoring.qpf, or sim
 ### Compiling the code
 
 To produce the binary file, in the Quartus Compilation Dashboard, double click on the Assembler step.
-This will produce, in the auto generate folder _output_files_, the binary file with extension .bit.
+This will produce, in the auto generate folder _output_files_, the binary file with extension .sof.
 
 The intermediate steps (Synthesis, Fitting, Timing Analysis, etc.) are also available in the GUI.
 
